@@ -1,56 +1,56 @@
-/* all the body will be in the center */
+/* center content in the viewport */
 body {
-    height: 100vh;  /* Full height of the viewport */
-    margin: 0;  /* Remove default margin */
-    display: flex;  /* Enable Flexbox on the body */
-    justify-content: center;  /* Center the container horizontally */
+    height: 100vh;  
+    margin: 0;  
+    display: flex;  
+    justify-content: center;  /* horizontal center */
     align-items: flex-start;  /* Align content to the top */
-    font-family: Arial, sans-serif;  /* Optional: Change the font */
-    background-color:beige;  /* Optional: Set background color */
+    font-family: Arial, sans-serif;  
+    background-color:beige;  
 }
 
-/* Adding some styling for the container */
+/* main container styling */
 .todo-container {
-    width: 80%;  /* Control the width of the container (you can adjust it) */
-    max-width: 600px;  /* Limit the max width */
-    background-color: rgb(209, 137, 43);  /* Background color for the container */
-    padding: 20px;  /* Padding inside the container */
-    border-radius: 8px;  /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow around the container */
-    text-align: center;  /* Center the text inside the container */
+    width: 80%;  
+    max-width: 600px; 
+    background-color: rgb(209, 137, 43); 
+    padding: 20px;  
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
 }
 
-/* Style the task list container */
+/* task list styling */
 #list-container {
-    list-style: none;  /* Remove default bullet points */
-    padding: 0;  /* Remove default padding */
-    margin-top: 20px;  /* Add margin to separate from header */
+    list-style: none;  /* no bullets */
+    padding: 0;  
+    margin-top: 20px;  
 }
 
-/* Style for each list item */
+/* Style for each task item */
 #list-container li {
-    display: flex;  /* Enable Flexbox for each task item */
+    display: flex;  
     justify-content: space-between;  /* Create space between task text and buttons */
-    align-items: center;  /* Vertically align text and buttons */
-    width: 100%;  /* Ensure the list item takes up the full width */
-    border: 1px solid #ddd;  /* Add a subtle border */
-    border-radius: 5px;  /* Rounded corners for each list item */
-    margin-bottom: 10px;  /* Add space between list items */
-    padding: 10px;  /* Add padding inside the list item */
+    align-items: center; 
+    width: 100%; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;  
+    margin-bottom: 10px;  
+    padding: 10px;  
     background-color: white;
 }
 
 /* Style for the buttons */
 button {
-    padding: 5px 10px;  /* Add padding inside the buttons */
-    border: 1px solid #ccc;  /* Add border for buttons */
-    border-radius: 5px;  /* Round the button corners */
-    cursor: pointer;  /* Show pointer cursor when hovering */
+    padding: 5px 10px; 
+    border: 1px solid #ccc;  
+    border-radius: 5px; 
+    cursor: pointer;  
     background-color: #f0f0f0;
 }
 
 /* Style when task is completed */
 .Completed {
-    text-decoration: line-through;  /* Strike through completed task */
-    color: gray;  /* Change text color to gray */
+    text-decoration: line-through;  
+    color: gray; 
 }

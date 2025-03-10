@@ -1,7 +1,7 @@
-// Select necessary elements from the HTML
-const inputBox = document.getElementById("input-box");
-const listContainer = document.getElementById("list-container");
-const addButton = document.getElementById("input-button");
+// select html elements
+const inputBox = document.getElementById("input-box"); //input field for tasks
+const listContainer = document.getElementById("list-container"); //where tasks will be shown
+const addButton = document.getElementById("input-button"); //add task button
 
 // Add event listener to the "Add Task" button
 addButton.addEventListener("click", addTask);
@@ -10,27 +10,28 @@ addButton.addEventListener("click", addTask);
 window.addEventListener("load", () => {
     listContainer.innerHTML = localStorage.getItem("tasks") || "";
     listContainer.querySelectorAll("li").forEach(li => {
-        addButtonEventListeners(li); // Varmistetaan, että kaikilla napeilla on tapahtumakäsittelijät
+        addButtonEventListeners(li); // makse sure all buttons work
     });
 });
 
 
 //function to add event listeners to task buttons
 function addButtonEventListeners(li) {
-    const completeButton = li.querySelector(".complete-button");
-    const deleteButton = li.querySelector(".delete-button");
+    const completeButton = li.querySelector(".complete-button"); //complete button
+    const deleteButton = li.querySelector(".delete-button"); //delete button
 
+    //complete task
     if (completeButton) {
         completeButton.addEventListener("click", () => {
             li.classList.toggle("Completed");
-            saveTasks();
+            saveTasks(); //save updated tasks
         });
     }
-
+    //delete- task
     if (deleteButton) {
         deleteButton.addEventListener("click", () => {
             li.remove();
-            saveTasks();
+            saveTasks(); //save updated tasks
         });
     }
 }
@@ -38,13 +39,15 @@ function addButtonEventListeners(li) {
 
 // Function to add a new task to the list
 function addTask() {
-    const task = inputBox.value.trim(); 
+    const task = inputBox.value.trim(); //get input
+
+    //checks if input is empty
     if (!task) { 
         inputBox.style.border = "2px solid red"; 
         alert("Please add your task");
         return;
     }
-    inputBox.style.border = ""; 
+    inputBox.style.border = ""; //reset border if input is ok
 
     const li = document.createElement("li"); 
     li.innerHTML = `${task} 
@@ -52,10 +55,10 @@ function addTask() {
         <button class="delete-button">Delete</button>`;
     
     listContainer.appendChild(li); 
-    addButtonEventListeners(li); // Lisää tapahtumakäsittelijät
+    addButtonEventListeners(li); // makes buttons work
     
-    inputBox.value = ""; 
-    saveTasks(); 
+    inputBox.value = ""; //clear input field
+    saveTasks(); //save tasks
 }
 
 
