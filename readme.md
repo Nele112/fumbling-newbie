@@ -1,4 +1,4 @@
-# Project name ToDo List
+# Project name ToDO List
 
 This is a simple to-do list web application built with HTML, CSS, and JavaScript.
 
